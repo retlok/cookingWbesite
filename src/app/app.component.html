@@ -1,0 +1,44 @@
+<div [ngSwitch]="loggedIn">
+  <div *ngSwitchCase="true"><mat-toolbar color="primary">
+    <button
+      (click)="drawer.toggle()"
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Cooking website</span>
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+  
+  <mat-drawer-container class="example-container" [hasBackdrop]="true">
+    <mat-drawer id="side-menu" #drawer [mode]="'over'">
+      <div>
+        <button mat-button extended routerLink="/recipe">
+          <mat-icon>menu_book</mat-icon>
+          Recipes
+        </button>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container></div>
+  <div *ngSwitchDefault>you need to log in</div>
+</div>
+
