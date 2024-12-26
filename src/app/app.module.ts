@@ -11,9 +11,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RecipesComponent } from './components/recipes/recipes.component';
 import { RecipeCardComponent } from './components/recipes/recipe-card/recipe-card.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
-  declarations: [AppComponent, RecipesComponent, RecipeCardComponent],
+  declarations: [AppComponent, RecipesComponent, RecipeCardComponent, ToolbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
