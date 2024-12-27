@@ -3,9 +3,10 @@ import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { Recipe } from 'src/app/models/recipe.model';
 
 @Component({
-  selector: 'app-recipes',
-  templateUrl: './recipes.component.html',
-  styleUrls: ['./recipes.component.scss'],
+    selector: 'app-recipes',
+    templateUrl: './recipes.component.html',
+    styleUrls: ['./recipes.component.scss'],
+    standalone: false
 })
 export class RecipesComponent implements OnInit {
   recipes: Recipe[] = [];

@@ -4,9 +4,10 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { THUMBUP_ICON } from 'src/assets/custom-svg';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
   title = 'cooking_website';
